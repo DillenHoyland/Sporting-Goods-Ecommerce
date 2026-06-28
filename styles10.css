@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  background-color: aliceblue;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+h1,
+h2,
+a,
+button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: aliceblue;
+}
+
+h2 {
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "box-1 box-2 box-3"
+    "box-1 box-4 box-5"
+    "box-7 box-7 box-7";
+  gap: 10px;
+}
+
+.grid-cell-1-p2 {
+  align-self: start;
+  justify-self: start;
+}
+.grid-cell-2-p2,
+.grid-cell-3-p2 {
+  align-self: center;
+  justify-self: center;
+}
+
+.grid-cell-3-p2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-self: flex-start;
+  justify-self: center;
+  font-size: 20px;
+  width: 70%;
+}
+.grid-cell-3-p2 button {
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.grid-cell-4-p2 {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2 / 4;
+  justify-self: center;
+  font-size: 20px;
+  width: 80%;
+}
+.grid-cell-5 {
+  justify-self: center;
+  position: relative;
+  top: 8px;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid hsl(0, 0%, 70%);
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+input:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+
+input:active {
+  background-color: hsl(0, 0%, 60%);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#image-1 {
+  width: 300px;
+  height: 240px;
+  position: relative;
+  bottom: 41px;
+}
+
+.dropdown {
+  display: inline-block;
+}
+.dropdown a {
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+.dropdown .dropdown-sub {
+  display: none;
+  position: absolute;
+  background-color: hsl(0, 0%, 95%);
+  min-width: 100px;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+}
+.dropdown:hover .dropdown-sub {
+  display: block;
+}
+.dropdown:hover a {
+  background-color: hsl(0, 0%, 70%);
+}
+.dropdown a:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.bottom {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: hsl(0, 0%, 70%);
+  box-shadow: 1px 1px 5px hsla(0, 0%, 0%, 0.8);
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.closing-statement {
+  text-align: center;
+}
+
+.checkout-title {
+  font-size: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+
+.product {
+  text-align: center;
+  height: 300px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: aliceblue;
+  border: 1rem solid hsl(0, 0%, 70%);
+  border-radius: 12px;
+  overflow-y: auto;
+}
+
+.product button,
+.to-cart button {
+  height: 60px;
+  width: 80px;
+  padding: 5px;
+  border-radius: 12px;
+  border: solid hsl(0, 0%, 30%);
+  font-size: 13px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.product button:hover,
+.to-cart button:hover {
+  background-color: hsl(0, 0%, 90%);
+  cursor: pointer;
+}
+
+.product button:active,
+.to-cart button:active {
+  background-color: hsl(0, 0%, 60%);
+}
+
+.product-1,
+.product-2,
+.product-3,
+.product-4,
+.product-5 {
+  display: none;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.product-1.active,
+.product-2.active,
+.product-3.active,
+.product-4.active,
+.product-5.active {
+  display: flex;
+}
+
+.added {
+  visibility: hidden;
+}
+
+.removed {
+  visibility: hidden;
+}
+
+.to-cart {
+  text-align: center;
+}
+
+.to-cart button {
+  width: 200px;
+}
+
+#football {
+  height: 60px;
+  width: 60px;
+  border: solid hsl(0, 0%, 30%);
+  border-radius: 12px;
+  padding: 5px;
+}
+
+.item-text {
+  display: none;
+  font-size: 12px;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: relative;
+  bottom: 45px;
+}
+.item-text.active {
+  display: block;
+}
+
+.button-1,
+.button-2 {
+  visibility: hidden;
+}
+
+.bottom a {
+  background-color: hsl(0, 0%, 70%);
+}

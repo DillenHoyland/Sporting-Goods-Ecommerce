@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+a,
+button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: aliceblue;
+}
+
+h2 {
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "box-1 box-2 box-3"
+    "box-1 box-4 box-5"
+    "box-7 box-7 box-7";
+  gap: 10px;
+}
+
+.grid-cell-1-p2 {
+  align-self: start;
+  justify-self: start;
+}
+.grid-cell-2-p2,
+.grid-cell-3-p2 {
+  align-self: center;
+  justify-self: center;
+}
+
+.grid-cell-3-p2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-self: flex-start;
+  justify-self: center;
+  font-size: 20px;
+  width: 70%;
+}
+.grid-cell-3-p2 button {
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.grid-cell-4-p2 {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2 / 4;
+  justify-self: center;
+  font-size: 20px;
+  width: 80%;
+}
+.grid-cell-5 {
+  justify-self: center;
+  position: relative;
+  top: 8px;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid hsl(0, 0%, 70%);
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+input:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+
+input:active {
+  background-color: hsl(0, 0%, 60%);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#image-1 {
+  width: 300px;
+  height: 240px;
+  position: relative;
+  bottom: 41px;
+}
+
+.dropdown {
+  display: inline-block;
+}
+.dropdown a {
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+.dropdown .dropdown-sub {
+  display: none;
+  position: absolute;
+  background-color: hsl(0, 0%, 95%);
+  min-width: 100px;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+}
+.dropdown:hover .dropdown-sub {
+  display: block;
+}
+.dropdown:hover a {
+  background-color: hsl(0, 0%, 70%);
+}
+.dropdown a:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.bottom {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: hsl(0, 0%, 70%);
+  box-shadow: 1px 1px 5px hsla(0, 0%, 0%, 0.8);
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.closing-statement {
+  text-align: center;
+}
+
+.checkout-title {
+  font-size: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+
+.admin-div-2 button,
+.admin-div-2-2 button {
+  padding: 10px;
+  border: solid hsl(0, 0%, 30%);
+  width: 100px;
+  border-radius: 12px;
+  margin-top: 10px;
+  font-size: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 90%);
+  cursor: pointer;
+}
+
+button:active {
+  background-color: hsl(0, 0%, 60%);
+}
+
+.admin-divs {
+  display: flex;
+  align-items: row;
+  justify-content: space-evenly;
+}
+
+.admin-divs h2 {
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+.admin-divs-2 {
+  display: flex;
+  align-items: row;
+  justify-content: space-evenly;
+}
+
+.admin-div-1 {
+  border: 0.5rem solid hsl(0, 0%, 70%);
+  border-radius: 10px;
+  text-align: center;
+  height: 200px;
+  width: 130px;
+  background-color: aliceblue;
+}
+
+.admin-div-1 p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+}
+
+.admin-div-2 {
+  border: 0.5rem solid hsl(0, 0%, 70%);
+  border-radius: 10px;
+  text-align: center;
+  height: 200px;
+  width: 130px;
+  background-color: aliceblue;
+}
+
+.admin-div-3 {
+  border: 0.5rem solid hsl(0, 0%, 70%);
+  border-radius: 10px;
+  text-align: center;
+  height: 200px;
+  width: 130px;
+  background-color: aliceblue;
+}
+
+.admin-div-3 p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.admin-div-1-2 {
+  border: 0.5rem solid hsl(0, 0%, 70%);
+  border-radius: 10px;
+  text-align: center;
+  height: 200px;
+  width: 130px;
+  background-color: aliceblue;
+}
+
+.admin-div-1-2 p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.admin-div-1-2 h2 {
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.admin-div-2-2 {
+  border: 0.5rem solid hsl(0, 0%, 70%);
+  border-radius: 10px;
+  text-align: center;
+  height: 200px;
+  width: 130px;
+  background-color: aliceblue;
+}
+
+.admin-div-2-2 h2 {
+  text-decoration: underline;
+  margin-bottom: auto;
+}
+
+.admin-div-2-2 button {
+  height: 50px;
+  font-size: 15px;
+}
+
+.bottom a {
+  background-color: hsl(0, 0%, 70%);
+}
